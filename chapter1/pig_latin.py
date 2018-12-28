@@ -1,4 +1,4 @@
-vowels = ['a', 'e', 'i', 'o', 'o']
+vowels = ['a', 'e', 'i', 'o', 'u']
 
 
 # translates either a word or sentence to pig latin based on input
@@ -47,6 +47,7 @@ def translate_sentence(english_sentence):
         # if last word of sentence, add period
         if i == len(words) - 1:
             pig_latin_sentence += translate_word(words[i]) + "."
+        # if first word of sentence, capitalize first word
         elif i == 0:
             lower_first_word = translate_word(words[i])
             upper_first_word = lower_first_word[0].upper() + lower_first_word[1:]
