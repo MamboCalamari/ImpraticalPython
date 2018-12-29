@@ -5,9 +5,8 @@ vowels = ['a', 'e', 'i', 'o', 'u']
 def main():
 
     while True:
-        word_or_semtence_input = input("\nWould you like to translate a word or a sentence? "
-                                       "(w for word, s for sentence)\n")
-        if word_or_semtence_input == "w":
+        sentence_input = input("\nWould you like to translate a word or a sentence? ""(w for word, s for sentence)\n")
+        if sentence_input == "w":
             english_word = input('Enter an English word to be translated to Pig Latin: ')
             pig_latin_word = translate_word(english_word)
             print(pig_latin_word)
