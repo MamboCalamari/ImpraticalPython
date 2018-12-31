@@ -2,9 +2,7 @@ import pprint
 from collections import defaultdict
 from googletrans import Translator
 
-# simulates a character bar chart with a pretty printed dictionary given user's sentence
-
-
+# simulates a character bar chart with a pretty printed dictionary given user's sentence (translated to French)
 def main():
 
     while True:
@@ -35,6 +33,7 @@ def generate_sentence_dict(sentence_input):
         if c.isalpha():
             sentence_dict[c].append(c)
     return sentence_dict
+
 
 # returns text in french
 def translate_to_french(sentence_input):
