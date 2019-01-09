@@ -36,25 +36,31 @@ last = ('Appleyard', 'Bigmeat', 'Bloominshine', 'Boogerbottom',
         'Weiners', 'Whipkey', 'Wigglesworth', 'Wimplesnatch', 'Winterkorn',
         'Woolysocks')
 
+
 # same as psuedonyms.py from authors code except it adds a middle name half of the time
-while True:
+def main():
+    while True:
 
-    firstName = random.choice(first)
-    lastName = random.choice(last)
+        firstName = random.choice(first)
+        lastName = random.choice(last)
 
-    if random.randrange(2) == 0:
-        print("\n\n")
-        middleName = random.choice(middle)
-        print(firstName, middleName, lastName, file=sys.stderr)
-        print("\n\n")
+        if random.randrange(2) == 0:
+            print("\n\n")
+            middleName = random.choice(middle)
+            print(firstName, middleName, lastName, file=sys.stderr)
+            print("\n\n")
 
-    else:
-        print("\n\n")
-        print(firstName, lastName, file = sys.stderr)
-        print("\n\n")
+        else:
+            print("\n\n")
+            print(firstName, lastName, file=sys.stderr)
+            print("\n\n")
 
-    try_again = input("\n\nTry again? (Press Enter else n to quit)\n ")
-    if try_again.lower() == "n":
-        break
+        try_again = input("\n\nTry again? (Press Enter else n to quit)\n ")
+        if try_again.lower() == "n":
+            break
 
-input("\nPress Enter to exit.")
+    input("\nPress Enter to exit.")
+
+
+if __name__ == "__main__":
+    main()
